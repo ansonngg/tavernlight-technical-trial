@@ -1,0 +1,17 @@
+MainWindow
+  id: jumpWindow
+  size: 300 300
+  @onEscape: modules.client_jump.hide()
+
+  MiniWindowContents
+    id: windowContent
+    anchor.top: parent.top
+    anchor.bottom: parent.bottom
+    anchor.left: parent.left
+    anchor.right: parent.right
+
+    Button
+      id: jumpButton
+      !text: tr('Jump!')
+      width: 50
+      @onClick: modules.client_jump.onJumpClick()

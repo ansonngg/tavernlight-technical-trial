@@ -1,0 +1,9 @@
+Module
+  name: client_jump
+  description: A button that jumps when pressed
+  author: ansonngg
+  website: https://github.com/ansonngg/tavernlight-technical-trial
+  sandboxed: true
+  scripts: [ jump.lua ]
+  @onLoad: init()
+  @onUnload: terminate()
