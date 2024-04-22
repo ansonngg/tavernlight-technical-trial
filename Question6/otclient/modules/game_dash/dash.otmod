@@ -1,0 +1,9 @@
+Module
+  name: game_dash
+  description: Used to bind effect to dash spell when using Ctrl + D
+  author: ansonngg
+  website: https://github.com/ansonngg/tavernlight-technical-trial
+  sandboxed: true
+  scripts: [ dash ]
+  @onLoad: init()
+  @onUnload: terminate()
