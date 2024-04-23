@@ -4,45 +4,20 @@ This is my solution of the technical trial task given by Tavernlight Games. In Q
 
 ## Instructions
 
-First, unzip all the files in `Environment`.
+1. Unzip all the files in `Environment`.
+1. Run `UniServerZ/UniController.exe`.
+1. Click "Start Apache" and "Start MySQL". Two pages will pop up. You may simply close them.
+1. Go to [EPuncker/1098extended](https://github.com/EPuncker/1098extended), download `dat and spr.zip` and unzip it.
+1. Create a new directory in `otclient/data/things` with name `1098`.
+1. Copy `Tibia.dat` and `Tibia.spr` from the unzipped `dat and spr.zip` to the new directory you have just created.
+1. Run `forgottenserver/theforgottenserver-x64.exe`
+1. Run `otclient/otclient.exe`
 
-### Database
-
-- Run `Environment/UniServerZ/UniController.exe`.
-    - It may ask you to change your MySQL root password. It is highly recommended to do so.
-- Click "Start Apache" and "Start MySQL". Two pages will pop up. You may close them at the moment.
-- Click "phpMyAdmin". A page will then pop up.
-- You might want to change your password hashing to "Native MySQL authentication" since TFS doesn't provide the required dll to support password hashing
-    - You can change it by clicking "User accounts" at the top and clicking "Change password".
-- Create a new database by clicking "New" on the left sidebar.
-- Select your database name and click "Create".
-- At the top, click the "Import" button.
-- Click "Choose File" and choose `Environment/forgottenserver/schema.sql`.
-- Scroll down and click "Import".
-- Repeat the above two steps to import `Environment/UniServerZ/www/engine/database/znote_schema.sql`.
-
-### Server Configuration
-
-- Open `Environment/forgottenserver/config.lua`.
-- Locate `mysqlUser`, `mysqlPass` and `mysqlDatabase`, and change their values accordingly.
-    - `mysqlUser`: The account that has access to the database you have just created.
-    - `mysqlPass`: The password of the account above.
-    - `mysqlDatabase`: The name of the database you have just created.
-
-### Character Creation
-
-- Open `Environment/UniServerZ/www/config.php`.
-- Locate `$config['sqlUser']`, `$config['sqlPassword']` and `$config['sqlDatabase']`, and change their values like how you did in [Server Configuration](#server-configuration).
-- Go back to the UniController. Click "View www". A page will then pop up
-- Use that page to create an account and a character.
-
-### Client Setup
-
-- Go to [EPuncker/1098extended](https://github.com/EPuncker/1098extended), download `dat and spr.zip` and unzip it.
-- Create a new directory in `Environment/otclient/data/things` with name `1098`.
-- Copy `Tibia.dat` and `Tibia.spr` from the unzipped files to the new directory you have just created.
-
-Everything is set up! You may now run `Environment/otclient/otclient.exe` and `Environment/forgottenserver/theforgottenserver-x64.exe` to try my works! You can login by setting:
-- Server: 127.0.0.1 (localhost)
+Now you can login with:
+- Account name: otcadmin
+- Password: otcadmin
+- Server: 127.0.0.1
 - Client Version: 1098
 - Port: 7171
+
+Enjoy!
